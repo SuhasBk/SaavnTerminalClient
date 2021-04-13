@@ -30,7 +30,7 @@ rep = 0
 
 #  Start working in background while waiting for user input
 def initialize():
-    b = args.browser
+    b = args.browser.lower()
     d = args.debug
     global browser
 
