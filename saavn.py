@@ -36,7 +36,7 @@ def initialize():
 
     print("\n\aConnecting to Saavn...\n")
     driver_dir = os.path.dirname(os.path.realpath(__file__))
-    if b == 'firefox':
+    if b.startswith('firefox'):
         opt = FireOptions()
         opt.headless = True
 
@@ -55,7 +55,7 @@ def initialize():
                 raise IndexError
         except IndexError:
             browser = webdriver.Firefox(executable_path=path,options=opt,service_log_path=os.path.devnull)
-    elif b == 'chrome':
+    elif b.startswith('chrome'):
         opt = ChromeOptions()
         opt.add_argument("--log-level=3")
         opt.add_argument("--window-size=1366,768")
@@ -73,7 +73,7 @@ def initialize():
             path = os.path.join(driver_dir,'drivers','windows','chromedriver.exe')
     
         browser = webdriver.Chrome(executable_path=path,options=opt,service_log_path=os.path.devnull)
-    elif b == 'edge':
+    elif b.startswith('microsoft'):
         opt = EdgeOptions()
         opt.use_chromium = True
 
