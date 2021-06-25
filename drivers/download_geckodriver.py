@@ -22,7 +22,7 @@ linux_links = list(filter(lambda x : 'linux' in x,links))
 download_links = {
     'linux': dict(zip([32, 64], linux_links)),
     'win32': dict(zip([32, 64], windows_links)),
-    'darwin': mac_links[0]
+    'darwin': mac_links[1]
 }    
    
 #this_os = 'linux' if sys.platform.startswith('linux') else sys.platform
