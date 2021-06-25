@@ -1,3 +1,6 @@
 __pycache__/
 .vscode
 saavn_gui.py
+/drivers/linux/*
+/drivers/mac/*
+/drivers/windows/*
